@@ -1,7 +1,10 @@
-export function countriesList(country) {
-  //   return `
-  //    <div class="country-item">
-  //   <img src="${flags.svg}" alt="flag" width="50"></img>
-  //   <p class="country-name">${name.official}</p>
-  // </div>`;
+function countriesList(countries) {
+  return countries.map(country => {
+    return `<li class="country-item">
+     <img src="${country.flags.svg}" alt="${country.name.official}" width="50"></img>
+     <p class="country-title">${country.name.official}</p>
+   </li>`;
+  });
 }
+
+export { countriesList };
